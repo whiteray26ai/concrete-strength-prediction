@@ -2,9 +2,14 @@ import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 import matplotlib
 matplotlib.use('TkAgg')
+import matplotlib.pyplot as plt
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import os
+
+# 配置matplotlib支持中文显示
+plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'SimSun', 'KaiTi']
+plt.rcParams['axes.unicode_minus'] = False
 
 from .data_reader import DataReader
 from .data_preprocessor import DataPreprocessor
